@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Log;
 use Stripe\Stripe;
 use Stripe\Checkout\Session;
@@ -53,6 +54,11 @@ class StripeController extends Controller
                 'user_id' => 1,
             ],
         ]);
+
+
+        if (config('app.env') === 'production') {
+            URL::forceScheme('https');
+        }
 
         return redirect($session->url, 303);
     }
