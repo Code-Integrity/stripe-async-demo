@@ -64,3 +64,5 @@ $ ./vendor/bin/pest
 This project is open-source software licensed under the [MIT License](LICENSE).
 
 ---
+
+_Note on localization: This live demo and parts of the temporary codebase are validated under the JST (Japan Standard Time) environment, hence showcasing Japanese localization on the Stripe checkout gateway during my real-time manual multi-layered integration tests._
